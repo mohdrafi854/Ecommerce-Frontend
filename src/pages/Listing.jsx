@@ -39,8 +39,8 @@ const Listing = () => {
   };
 
   useEffect(() => {
-    fetchProducts(category, rating, sorting, searchQuery, selectedCategory);
-  }, [category, rating, sorting, searchQuery, selectedCategory, fetchProducts]);
+    fetchProducts(category, rating, sorting);
+  }, [category, rating, sorting, searchQuery, selectedCategory]);
 
   const handleMenCategory = (event) => {
     const { value, checked } = event.target;

@@ -5,19 +5,19 @@ import axios from "axios";
 import { useCart } from "../../context/CartContext";
 
 const ProductCard = ({ product }) => {
-  const [addCart, setAddCart] = useState("");
   const navigate = useNavigate();
   const { updateCounter } = useCart();
   const [isLiked, setIsLiked] = useState([]);
 
   const addToCart = async (productId, quantity) => {
     try {
-      const response = await axios.post("https://ecommerce-backend-delta-five.vercel.app/api/cart", {
-        productId,
-        quantity: Number(quantity),
-      });
-
-      setAddCart(response.data);
+      const response = await axios.post(
+        "https://ecommerce-backend-delta-five.vercel.app/api/cart",
+        {
+          productId,
+          quantity: Number(quantity),
+        }
+      );
 
       const totalItems = response.data.items.reduce(
         (accu, curr) => accu + curr.quantity,
@@ -33,16 +33,18 @@ const ProductCard = ({ product }) => {
 
   const handleWishlist = async (productId) => {
     try {
-      await axios.post("https://ecommerce-backend-delta-five.vercel.app/api/wishlist", {
-        productId,
-      });
+      await axios.post(
+        "https://ecommerce-backend-delta-five.vercel.app/api/wishlist",
+        {
+          productId,
+        }
+      );
 
-      
-
-      setIsLiked(prev => prev.includes(productId) ? prev.filter(id => id !== productId) : [...prev, productId])
-
-     
-     
+      setIsLiked((prev) =>
+        prev.includes(productId)
+          ? prev.filter((id) => id !== productId)
+          : [...prev, productId]
+      );
     } catch (error) {
       console.error("Server Error:", error);
     }
@@ -64,8 +66,10 @@ const ProductCard = ({ product }) => {
                 onClick={() => handleWishlist(product._id)}
               >
                 <i
-                  class={`bi wishlist-icon ${
-                    isLiked.includes(product._id) ? "bi-heart-fill text-danger" : "bi-heart"
+                  className={`bi wishlist-icon ${
+                    isLiked.includes(product._id)
+                      ? "bi-heart-fill text-danger"
+                      : "bi-heart"
                   }`}
                 ></i>
               </div>
