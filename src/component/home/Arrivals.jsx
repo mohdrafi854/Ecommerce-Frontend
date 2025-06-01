@@ -26,7 +26,7 @@ const Arrivals = () => {
               </div>
             </div>
           </Link>
-          <a href="#"></a>
+          
         </div>
         <div className="col-md-5">
           <Link

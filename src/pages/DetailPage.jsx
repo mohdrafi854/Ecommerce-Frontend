@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Header from "../component/Header";
 import { useParams, Link } from "react-router";
 import axios from "axios";
 
