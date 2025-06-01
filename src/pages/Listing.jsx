@@ -1,7 +1,7 @@
 import Sidebar from "../component/Sidebar";
 import ProductCard from "../component/listing/ProductCard";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useSearch } from "../context/SearchContext";
 import { useLocation } from "react-router";
 
@@ -15,7 +15,8 @@ const Listing = () => {
   const queryParams = new URLSearchParams(location.search);
   const selectedCategory = queryParams.get("category")
 
-  const fetchProducts = async (selectCategory, selectRating, selectSort) => {
+  const fetchProducts = useCallback(
+    async (selectCategory, selectRating, selectSort) => {
     try {
       let url = `https://ecommerce-backend-delta-five.vercel.app/api/products`;
 
@@ -36,11 +37,11 @@ const Listing = () => {
     } catch (error) {
       console.error("Failed to fetch products:", error);
     }
-  };
-
+  }, [searchQuery, selectedCategory]
+  )
   useEffect(() => {
     fetchProducts(category, rating, sorting);
-  }, [category, rating, sorting, searchQuery, selectedCategory]);
+  }, [category, rating, sorting, searchQuery, selectedCategory, fetchProducts]);
 
   const handleMenCategory = (event) => {
     const { value, checked } = event.target;
