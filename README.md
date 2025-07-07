@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Ecommerce App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-featured E-commerce web application built to enables users to browse products, manage their carts and wishlists user manage products, categories, orders, and users through a dedicated dashboard.
 
-## Available Scripts
+## Demo Link
 
-In the project directory, you can run:
+[Live Demo](https://internetshopping.vercel.app)
 
 ### `npm start`
 
