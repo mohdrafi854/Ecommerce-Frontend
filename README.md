@@ -8,6 +8,8 @@ A full-featured E-commerce web application built to enables users to browse prod
 
 [Live Demo](https://internetshopping.vercel.app)
 
+---
+
 ## Quick Start
 ```
 git clone https://github.com/mohdrafi854/Ecommerce-Frontend.git
