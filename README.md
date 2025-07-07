@@ -51,4 +51,14 @@ Watch a walkthrough (5–7 minutes) of all major features of this app: [Loom Vid
 **AddToCart Page**
 - Show all add to cart items
 
+## API Refrence
+
+### GET /api/categories
+
+Display all categories
+Sample Response:
+```
+[{_id, name, imageUrl}]
+```
+
 
