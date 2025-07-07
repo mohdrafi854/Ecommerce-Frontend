@@ -6,13 +6,13 @@ A full-featured E-commerce web application built to enables users to browse prod
 
 [Live Demo](https://internetshopping.vercel.app)
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Quick Start
+```
+git clone https://github.com/mohdrafi854/Ecommerce-Frontend.git
+cd <your-repo>
+npm install
+npm run dev  # or `npm run start` / `yarn dev`
+```
 
 ### `npm test`
 
