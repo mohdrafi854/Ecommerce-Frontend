@@ -2,6 +2,8 @@
 
 A full-featured E-commerce web application built to enables users to browse products, manage their carts and wishlists user manage products, categories, orders, and users through a dedicated dashboard.
 
+---
+
 ## Demo Link
 
 [Live Demo](https://internetshopping.vercel.app)
