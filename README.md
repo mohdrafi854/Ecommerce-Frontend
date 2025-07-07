@@ -53,12 +53,65 @@ Watch a walkthrough (5–7 minutes) of all major features of this app: [Loom Vid
 
 ## API Refrence
 
-### GET /api/categories
-
-Display all categories
-Sample Response:
+### **GET /api/categories**<br>
+Display all categories<br>
+Sample Response:<br>
 ```
-[{_id, name, imageUrl}]
+[{_id, name, imageUrl}, ....]
 ```
 
+### **GET /api/products**<br>
+Display all List<br>
+Sample Response:<br>
+```
+[{_id, name, price, rating, size, imageUrl}, ....]
+```
 
+### **GET /api/products**<br>
+View full details<br>
+Sample Response:<br>
+```
+[{_id, name, price, rating, size, imageUrl}, ....]
+```
+
+### **GET /api/wishlist**<br>
+Display all wishlist items<br>
+Sample Response:<br>
+```
+[{_id, Category, imageUrl, name, price, rating, size}, ....]
+```
+
+### **GET /api/cart**<br>
+Display all cart items<br>
+Sample Response:<br>
+```
+[{_id, items, totalPrice}, ....]
+```
+
+### **POST /api/products**<br>
+Create new item<br>
+Sample Response:<br>
+```
+[{_id, name, price, imageUrl, Category}, ....]
+```
+
+### **PATCH /api/products/:id**<br>
+Create new item<br>
+Sample Response:<br>
+```
+[{_id, name, price, imageUrl, Category}, ....]
+```
+
+### **POST /api/categories**<br>
+Create new category<br>
+Sample Response:<br>
+```
+[{_id, name, imageUrl}, ....]
+```
+
+### **DELETE /api/categories/:id**<br>
+Delete item by id<br>
+Sample Response:<br>
+```
+[{_id}, ....]
+```
