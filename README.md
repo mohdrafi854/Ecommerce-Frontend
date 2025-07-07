@@ -143,3 +143,7 @@ Sample Response:<br>
 ```
 [{_id}, ....]
 ```
+---
+
+## Contact
+For bug or feature requests, please reach out to mohd.rafi854@gmail.com
