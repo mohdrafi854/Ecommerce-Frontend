@@ -115,3 +115,31 @@ Sample Response:<br>
 ```
 [{_id}, ....]
 ```
+
+### **POST /api/cart**<br>
+Add to cart item<br>
+Sample Response:<br>
+```
+[{_id, quantity}, ....]
+```
+
+### **DELETE /api/cart/item/:id**<br>
+Delete cart item<br>
+Sample Response:<br>
+```
+[{_id}, ....]
+```
+
+### **POST /api/wishlist**<br>
+Add to wishlist item<br>
+Sample Response:<br>
+```
+[{_id}, ....]
+```
+
+### **DELETE /api/wishlist/:id**<br>
+Delete wishlist item<br>
+Sample Response:<br>
+```
+[{_id}, ....]
+```
