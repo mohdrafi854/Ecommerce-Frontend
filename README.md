@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+# Ecommerce App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-featured E-commerce web application built to enables users to browse products, manage their carts and wishlists user manage products, categories, orders, and users through a dedicated dashboard.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Demo Link
 
-### `npm start`
+[Live Demo](https://internetshopping.vercel.app)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Quick Start
+```
+git clone https://github.com/mohdrafi854/Ecommerce-Frontend.git
+cd <your-repo>
+npm install
+npm run dev  # or `npm run start` / `yarn dev`
+```
 
-### `npm test`
+## Technologies
+- React JS
+- React Router
+- Node JS
+- Express JS
+- MongoDB
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo Video
+Watch a walkthrough (5–7 minutes) of all major features of this app: [Loom Video Link]()
 
-### `npm run build`
+## Features
+**Home**
+- Display product categories
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Lisitng Page**
+- Display all the Products
+- Product search by name
+- Filter by categories
+- Filter product by rating
+- Sort product by price 
+- Click wishlist icon and add item
+- Click on Add to cart cart to add item
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Detail Page**
+- View full information
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Wishlist Page**
+- Show all wishlist items
 
-### `npm run eject`
+**AddToCart Page**
+- Show all add to cart items
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## API Refrence
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **GET /api/categories**<br>
+Display all categories<br>
+Sample Response:<br>
+```
+[{_id, name, imageUrl}, ....]
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **GET /api/products**<br>
+Display all List<br>
+Sample Response:<br>
+```
+[{_id, name, price, rating, size, imageUrl}, ....]
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **GET /api/products**<br>
+View full details<br>
+Sample Response:<br>
+```
+[{_id, name, price, rating, size, imageUrl}, ....]
+```
 
-## Learn More
+### **GET /api/wishlist**<br>
+Display all wishlist items<br>
+Sample Response:<br>
+```
+[{_id, Category, imageUrl, name, price, rating, size}, ....]
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **GET /api/cart**<br>
+Display all cart items<br>
+Sample Response:<br>
+```
+[{_id, items, totalPrice}, ....]
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **POST /api/products**<br>
+Create new item<br>
+Sample Response:<br>
+```
+[{_id, name, price, imageUrl, Category}, ....]
+```
 
-### Code Splitting
+### **PATCH /api/products/:id**<br>
+Create new item<br>
+Sample Response:<br>
+```
+[{_id, name, price, imageUrl, Category}, ....]
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **POST /api/categories**<br>
+Create new category<br>
+Sample Response:<br>
+```
+[{_id, name, imageUrl}, ....]
+```
 
-### Analyzing the Bundle Size
+### **DELETE /api/categories/:id**<br>
+Delete item by id<br>
+Sample Response:<br>
+```
+[{_id}, ....]
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### **POST /api/cart**<br>
+Add to cart item<br>
+Sample Response:<br>
+```
+[{_id, quantity}, ....]
+```
 
-### Making a Progressive Web App
+### **DELETE /api/cart/item/:id**<br>
+Delete cart item<br>
+Sample Response:<br>
+```
+[{_id}, ....]
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### **POST /api/wishlist**<br>
+Add to wishlist item<br>
+Sample Response:<br>
+```
+[{_id}, ....]
+```
 
-### Advanced Configuration
+### **DELETE /api/wishlist/:id**<br>
+Delete wishlist item<br>
+Sample Response:<br>
+```
+[{_id}, ....]
+```
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+For bug or feature requests, please reach out to mohd.rafi854@gmail.com
